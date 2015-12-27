@@ -10,12 +10,13 @@
                 </button>
                 <a class="navbar-brand" href="javascript:void(0)">Lakewood Athletic Boosters</a>
             </div>
-            <div id="nav-bar" class="navbar-collapse collapse"></div>
-            <ul class="nav navbar-nav">
-                <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
-                    <a href.bind="row.href">${row.title}</a>
-                </li>
-            </ul>
+            <div id="nav-bar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+                        <a href.bind="row.href">${row.title}</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </template>
