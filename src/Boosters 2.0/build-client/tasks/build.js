@@ -50,18 +50,27 @@ gulp.task('copy-glyphicons', function () {
         .pipe(gulp.dest(paths.distCss));
 });
 
+gulp.task('clean-images', function () {
+    del(paths.distImages + '/*');
+});
+
+gulp.task('copy-images', function () {
+    gulp.src(paths.images)
+        .pipe(gulp.dest(paths.distImages))
+});
+
 gulp.task('clean', function () {
-    gulp.src([paths.distJs, paths.distCss])
+    gulp.src([paths.distJs, paths.distCss, paths.distImages])
         .pipe(clean({ force: true }));
     del([paths.distAurelia + '/*.js']);
 });
 
 gulp.task('build-app', function () {
-    run('clean', ['bundle-aurelia', 'build-css', 'build-js', 'copy-glyphicons']);
+    run('clean', ['bundle-aurelia', 'build-css', 'build-js', 'copy-glyphicons', 'copy-images']);
 });
 
 gulp.task('build', function () {
-    return runSequence(['unbundle-aurelia', 'build-css', 'build-js', 'copy-glyphicons']);
+    return runSequence(['unbundle-aurelia', 'build-css', 'build-js', 'copy-glyphicons', 'copy-images']);
 });
 
 gulp.task('default', ['watch-sass']);

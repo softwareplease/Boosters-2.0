@@ -1,6 +1,7 @@
-﻿import $ from 'jquery';
+﻿import $ from 'bootstrap';
+
 export class Home {
     constructor () {
-        //$('#carousel').carousel();
+        $('#carousel').carousel();
     }
 }

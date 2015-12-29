@@ -3,6 +3,7 @@
     distFolder = '/dist',
     styleFolder = '/style',
     libFolder = '/lib',
+    contentFolder = '/content',
     bootstrapFolder = '/github/twbs/bootstrap-sass@3.3.6/assets';
 
 module.exports = {
@@ -15,6 +16,10 @@ module.exports = {
     distCss: root + distFolder + '/css',
     distJs: root + distFolder + '/js',
     distAurelia: root + distFolder + '/aurelia',
+    distImages: root + distFolder + '/images',
+    images: [
+        root + contentFolder + '/images/*' 
+    ],
     js: [
         root + libFolder + '/github/components/jquery@2.1.4/jquery.js',
         root + libFolder + bootstrapFolder + '/javascripts/bootstrap.js'
