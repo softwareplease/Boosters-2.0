@@ -5819,3 +5819,12 @@ button.close {
 
 .navbar {
   margin-bottom: 0; }
+
+.top-buffer {
+  margin-top: 20px; }
+
+.primary {
+  color: #337ab7; }
+
+.secondary {
+  color: #f4cd64; }
