@@ -44,9 +44,16 @@
                         <strong>${currentMembership.name}</strong>
                     </div>
                     <div class="panel-body text-center">
-                        <h2>&#36;${currentMembership.amount}</h2>
-                        <p>${currentMembership.text}</p>
-                        <a href="${currentMembership.url}" class="btn btn-primary pull-left" target="_blank">Choose ${currentMembership.name}</a>
+                        <div class="member-details-wrapper">
+                            <div class="member-background">
+                                <i class="glyphicon ${currentMembership.icon}"></i>
+                            </div>
+                            <div class="member-details">
+                                <h2>&#36;${currentMembership.amount}</h2>
+                                <p>${currentMembership.text}</p>
+                            </div>
+                        </div>
+                        <a href="${currentMembership.url}" class="btn btn-primary pull-left clearfix" target="_blank">Choose ${currentMembership.name}</a>
                     </div>
                 </div>
             </div>
