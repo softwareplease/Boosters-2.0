@@ -1,3 +1,17 @@
 ﻿<template>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header text-primary">Photos</h1>
+                <div class="well text-center">
+                    View the full list of L.A.B. photos on <a href="https://www.flickr.com/photos/100143837@N03/" target="_blank">Flicker</a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3" repeat.for="image of images">
+                <a class="thumbnail" href.bind="image.link" target="_blank">
+                    <img class="flickr-image" src.bind="image.media.m"/>
+                </a>
+            </div>
+        </div>
+    </div>
 </template>

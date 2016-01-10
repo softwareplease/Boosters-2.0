@@ -1,3 +1,70 @@
 ﻿<template>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header text-primary no-border">
+                    Meet the entire board of the L.A.B.
+                </h2>
+                <p class="lead text-primary">Executive Board of Directors</p>
+                <hr />
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr repeat.for="person of boardOfDirectors">
+                            <td>${person.position}</td>
+                            <td>${person.name}</td>
+                            <td><a href="mailto:${person.email}">${person.email}</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="lead text-primary">Athletic Office</p>
+                <hr />
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr repeat.for="person of athleticOffice">
+                            <td>${person.position}</td>
+                            <td>${person.name}</td>
+                            <td><a href="mailto:${person.email}">${person.email}</a></td>
+                        </tr>
+                        <tr>
+                            <td>Athletic Office phone number</td>
+                            <td>-</td>
+                            <td>529-4034</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="lead text-primary">Delegates</p>
+                <hr />
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr repeat.for="person of delegates">
+                            <td>${person.position}</td>
+                            <td>${person.name}</td>
+                            <td><a href="mailto:${person.email}">${person.email}</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </template>

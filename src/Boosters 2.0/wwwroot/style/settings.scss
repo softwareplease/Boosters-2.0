@@ -1,2 +1,29 @@
 ﻿$icon-font-path: "/dist/css/";
+$brand-primary:#6F5584;
 $brand-secondary: #f4cd64;
+
+/*#region NavBar*/
+
+//Reset inverted navbar basics
+$navbar-inverse-color:                      #fff;
+$navbar-inverse-bg:                         $brand-primary;
+$navbar-inverse-border:                     lighten($navbar-inverse-bg, 10%) !default;
+
+// Inverted navbar links
+$navbar-inverse-link-color:                 #fff;
+$navbar-inverse-link-hover-color:           $brand-secondary;
+$navbar-inverse-link-hover-bg:              lighten($navbar-inverse-bg, 10%) !default;
+$navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
+$navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%) !default;
+
+// Inverted navbar brand label
+$navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
+$navbar-inverse-brand-hover-color:          $brand-secondary !default;
+$navbar-inverse-brand-hover-bg:             transparent !default;
+
+// Inverted navbar toggle
+$navbar-inverse-toggle-hover-bg:            lighten($navbar-inverse-bg, 10%) !default;
+$navbar-inverse-toggle-icon-bar-bg:         #fff !default;
+$navbar-inverse-toggle-border-color:        lighten($navbar-inverse-bg, 10%) !default;
+
+/*#endregion NavBar*/
