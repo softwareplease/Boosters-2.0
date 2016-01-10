@@ -13,10 +13,12 @@ module.exports = {
     lib: root + libFolder,
     sass: root + styleFolder + '/*.scss',
     css: root + styleFolder + '/*.css',
+    files: root + contentFolder + '/files/**/*',
     distCss: root + distFolder + '/css',
     distJs: root + distFolder + '/js',
     distAurelia: root + distFolder + '/aurelia',
     distImages: root + distFolder + '/images',
+    distFiles: root + distFolder + '/files',
     images: [
         root + contentFolder + '/images/*' 
     ],

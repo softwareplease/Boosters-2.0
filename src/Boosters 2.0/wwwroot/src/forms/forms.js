@@ -1,21 +1,22 @@
 ﻿export class Forms {
 
+    root = '/dist/files/';
+
     constructor() {
-        //TODO Fill out file paths
         this.membership = [
-            {name: 'Membership', file: ''}
+            {name: 'Membership', file: this.root + 'membership.docx'}
         ];
         this.nightAtTheRaces = [
-            {name: 'Ticket', file: ''},
-            {name: 'Sponsorship', file: ''},
-            {name: 'Booster Letter', file: ''}
+            {name: 'Ticket', file: this.root + 'tickets.pdf'},
+            {name: 'Sponsorship', file: this.root + 'sponsorship.pdf'},
+            {name: 'Booster Letter', file: this.root + 'letter.docx'}
         ];
         this.scholarship = [
-            {name: 'Scholarship', file: ''}
+            {name: 'Scholarship', file: this.root + 'scholarship2015.docx'}
         ];
         this.team = [
-            {name: 'Deposit', file: ''},
-            {name: 'Funds Request', file: ''}
+            {name: 'Deposit', file: this.root + 'deposit.docx'},
+            {name: 'Funds Request', file: this.root + 'request.docx'}
         ];
     }
 

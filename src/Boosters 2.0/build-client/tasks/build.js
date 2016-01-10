@@ -6,6 +6,7 @@
     concat = require("gulp-concat"),
     bundler = require("aurelia-bundler"),
     runSequence = require("run-sequence"),
+    flatten = require('gulp-flatten'),
     del = require('del'),
     paths = require("../paths.js");
 
@@ -54,23 +55,33 @@ gulp.task('clean-images', function () {
     del(paths.distImages + '/*');
 });
 
-gulp.task('copy-images', function () {
+gulp.task('copy-images', ['clean-images'],  function () {
     gulp.src(paths.images)
         .pipe(gulp.dest(paths.distImages))
 });
 
+gulp.task('clean-files', function () {
+    del(paths.distFiles + '/*');
+});
+
+gulp.task('copy-files', ['clean-files'], function () {
+    gulp.src(paths.files)
+        .pipe(flatten())
+        .pipe(gulp.dest(paths.distFiles));
+});
+
 gulp.task('clean', function () {
-    gulp.src([paths.distJs, paths.distCss, paths.distImages])
+    gulp.src([paths.distJs, paths.distCss, paths.distImages, paths.distFiles])
         .pipe(clean({ force: true }));
     del([paths.distAurelia + '/*.js']);
 });
 
 gulp.task('build-app', function () {
-    run('clean', ['bundle-aurelia', 'build-css', 'build-js', 'copy-glyphicons', 'copy-images']);
+    run('clean', ['bundle-aurelia', 'build-css', 'build-js', 'copy-glyphicons', 'copy-images', 'copy-files']);
 });
 
 gulp.task('build', function () {
-    return runSequence(['unbundle-aurelia', 'build-css', 'build-js', 'copy-glyphicons', 'copy-images']);
+    return runSequence(['unbundle-aurelia', 'build-css', 'build-js', 'copy-glyphicons', 'copy-images', 'copy-files']);
 });
 
 gulp.task('default', ['watch-sass']);

@@ -5819,6 +5819,18 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+html, body {
+  height: 100%; }
+
+.wrap {
+  min-height: 100%;
+  height: auto !important;
+  margin: 0 auto -60px; }
+
+/*.spacer {
+    width:100%;
+    height:60px;
+}*/
 .navbar {
   margin-bottom: 0; }
 
@@ -5834,6 +5846,23 @@ button.close {
 .text-primary {
   color: #6F5584 !important; }
 
+.no-border {
+  border: none !important; }
+
+ul.no-bullets {
+  list-style-type: none; }
+
+/*.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #F5F5F5;
+    .container {
+        padding-right:15px;
+        padding-left:15px;
+    }
+}*/
 /*#region Member*/
 .member-details-wrapper {
   position: relative;
@@ -5860,19 +5889,6 @@ button.close {
     margin-top: 60px; }
 
 /*#endregion Member*/
-.no-border {
-  border: none !important; }
-
-ul.no-bullets {
-  list-style-type: none; }
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-color: #F5F5F5; }
-
 /*#region Flickr*/
 .flickr-image {
   width: 260px !important;

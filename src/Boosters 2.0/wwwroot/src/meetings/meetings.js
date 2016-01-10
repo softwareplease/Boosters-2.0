@@ -1,31 +1,32 @@
 ﻿export class Meetings {
 
+    root = '/dist/files/';
+
     constructor() {
-        //TODO Fill out file paths
         this.agendas = [
-            {name: '2014-2015', file: ''},
-            {name: '2015-2016', file: ''},
-            {name: 'October 2015', file: ''},
-            {name: 'November 2015', file: ''}
+            {name: '2014-2015', file: this.root + 'agenda14-15.docx'},
+            {name: '2015-2016', file: this.root + 'agenda15-16.docx'},
+            {name: 'October 2015', file: this.root + 'agendaOct-15.docx'},
+            {name: 'November 2015', file: this.root + 'agendaNov-15.docx'}
         ];
         this.minutes2015 = [
-            {name: 'January', file: ''},
-            {name: 'February', file: ''},
-            {name: 'March', file: ''},
-            {name: 'April', file: ''},
-            {name: 'May', file: ''},
-            {name: 'August', file: ''},
-            {name: 'September', file: ''},
-            {name: 'November', file: ''}
+            {name: 'January', file: this.root + 'minutesJan-15.docx'},
+            {name: 'February', file: this.root + 'minutesFeb-15.docx'},
+            {name: 'March', file: this.root + 'minutesMar-15.docx'},
+            {name: 'April', file: this.root + 'minutesApr-15.docx'},
+            {name: 'May', file: this.root + 'minutesMay-15.docx'},
+            {name: 'August', file: this.root + 'minutesAug-15.docx'},
+            {name: 'September', file: this.root + 'minutesSep-15.docx'},
+            {name: 'November', file: this.root + 'minutesNov-15.docx'}
         ];
         this.minutes2014 = [
-            {name: 'August', file: ''},
-            {name: 'September', file: ''},
-            {name: 'October', file: ''},
-            {name: 'November', file: ''}
+            {name: 'August', file: this.root + 'minutesAug-14.docx'},
+            {name: 'September', file: this.root + 'minutesSep-14.docx'},
+            {name: 'October', file: this.root + 'minutesOct-14.docx'},
+            {name: 'December', file: this.root + 'minutesDec-14.docx'}
         ];
         this.bylaws = [
-            {name: 'Bylaws and Constitution', file: ''}
+            {name: 'Bylaws and Constitution', file: this.root + 'constitution.pdf'}
         ];
     }
 

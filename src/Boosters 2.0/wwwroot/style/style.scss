@@ -1,6 +1,21 @@
 ﻿@import "settings.scss";
 @import "../lib/github/twbs/bootstrap-sass@3.3.6/assets/stylesheets/_bootstrap.scss";
 
+html, body {
+    height:100%;
+}
+
+.wrap {
+    min-height:100%;
+    height:auto !important;
+    margin: 0 auto -60px;
+}
+
+/*.spacer {
+    width:100%;
+    height:60px;
+}*/
+
 .navbar {
     margin-bottom:0;
 }
@@ -20,6 +35,26 @@
 .text-primary {
     color:$brand-primary !important;
 }
+
+.no-border {
+    border:none !important;
+}
+
+ul.no-bullets {
+    list-style-type:none;
+}
+
+/*.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #F5F5F5;
+    .container {
+        padding-right:15px;
+        padding-left:15px;
+    }
+}*/
 
 /*#region Member*/
 
@@ -53,22 +88,6 @@
 }
 
 /*#endregion Member*/
-
-.no-border {
-    border:none !important;
-}
-
-ul.no-bullets {
-    list-style-type:none;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #F5F5F5;
-}
 
 /*#region Flickr*/
 
