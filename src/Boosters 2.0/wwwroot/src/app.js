@@ -12,4 +12,5 @@
         ]);
         //{ route: 'News', name: 'news', moduleId: './news/news', nav: true, title: 'News' },
     }
+
 }

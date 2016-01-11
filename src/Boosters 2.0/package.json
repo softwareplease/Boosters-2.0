@@ -26,6 +26,7 @@
       "aurelia-http-client": "npm:aurelia-http-client@^1.0.0-beta.1.0.1",
       "bootstrap": "github:twbs/bootstrap@^3.3.6",
       "bootstrap-sass": "github:twbs/bootstrap-sass@^3.3.6",
+      "font-awesome": "npm:font-awesome@^4.5.0",
       "jquery": "github:components/jquery@^2.1.4"
     },
     "devDependencies": {

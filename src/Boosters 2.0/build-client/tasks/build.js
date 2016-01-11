@@ -42,12 +42,12 @@ gulp.task('build-js', function () {
            .pipe(gulp.dest(paths.distJs));
 });
 
-gulp.task('clean-glyphicons', function () {
+gulp.task('clean-icons', function () {
     del(paths.distCss + '/!(*.css)');
 });
 
-gulp.task('copy-glyphicons', function () {
-    gulp.src(paths.bootstrap.icons)
+gulp.task('copy-icons', ['clean-icons'], function () {
+    gulp.src(paths.icons)
         .pipe(gulp.dest(paths.distCss));
 });
 
@@ -77,11 +77,11 @@ gulp.task('clean', function () {
 });
 
 gulp.task('build-app', function () {
-    run('clean', ['bundle-aurelia', 'build-css', 'build-js', 'copy-glyphicons', 'copy-images', 'copy-files']);
+    run('clean', ['bundle-aurelia', 'build-css', 'build-js', 'copy-icons', 'copy-images', 'copy-files']);
 });
 
 gulp.task('build', function () {
-    return runSequence(['unbundle-aurelia', 'build-css', 'build-js', 'copy-glyphicons', 'copy-images', 'copy-files']);
+    return runSequence(['unbundle-aurelia', 'build-css', 'build-js', 'copy-icons', 'copy-images', 'copy-files']);
 });
 
 gulp.task('default', ['watch-sass']);

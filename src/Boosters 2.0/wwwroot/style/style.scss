@@ -1,5 +1,6 @@
 ﻿@import "settings.scss";
 @import "../lib/github/twbs/bootstrap-sass@3.3.6/assets/stylesheets/_bootstrap.scss";
+@import "../lib/npm/font-awesome@4.5.0/scss/font-awesome";
 
 html, body {
     height:100%;
@@ -43,6 +44,22 @@ html, body {
 ul.no-bullets {
     list-style-type:none;
 }
+
+.page-header-large {
+    font-size:8em;
+}
+
+.logo {
+    position:absolute;
+    top:0;
+    left:48%;
+    z-index:1000;
+    @media(max-width: $screen-md-min) {
+        left:39%;
+    }
+}
+
+
 
 /*.footer {
     position: absolute;
@@ -97,3 +114,11 @@ ul.no-bullets {
 }
 
 /*#endregion Flickr*/
+
+/*#region FontAwesome*/
+
+.fa-large {
+    font-size:10em;
+}
+
+/*#endregion FontAwesome*/

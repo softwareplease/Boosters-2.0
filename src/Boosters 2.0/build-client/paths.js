@@ -4,7 +4,8 @@
     styleFolder = '/style',
     libFolder = '/lib',
     contentFolder = '/content',
-    bootstrapFolder = '/github/twbs/bootstrap-sass@3.3.6/assets';
+    bootstrapFolder = '/github/twbs/bootstrap-sass@3.3.6/assets',
+    fontAwesomeFolder = '/npm/font-awesome@4.5.0';
 
 module.exports = {
     appRoot: root,
@@ -26,7 +27,8 @@ module.exports = {
         root + libFolder + '/github/components/jquery@2.1.4/jquery.js',
         root + libFolder + bootstrapFolder + '/javascripts/bootstrap.js'
     ],
-    bootstrap: {
-        icons: root + libFolder + bootstrapFolder + '/fonts/bootstrap/*'
-    }
+    icons: [
+        root + libFolder + bootstrapFolder + '/fonts/bootstrap/*',
+        root + libFolder + fontAwesomeFolder + '/fonts/*'
+    ]
 }
