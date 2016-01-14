@@ -24,7 +24,7 @@ module.exports = {
         root + contentFolder + '/images/*' 
     ],
     js: [
-        root + libFolder + '/github/components/jquery@2.1.4/jquery.js',
+        root + libFolder + '/github/components/jquery@2.2.0/jquery.js',
         root + libFolder + bootstrapFolder + '/javascripts/bootstrap.js'
     ],
     icons: [
