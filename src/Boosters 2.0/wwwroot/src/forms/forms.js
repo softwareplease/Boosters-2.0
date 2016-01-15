@@ -7,8 +7,8 @@
             {name: 'Membership', file: this.root + 'membership.docx'}
         ];
         this.nightAtTheRaces = [
-            {name: 'Ticket', file: this.root + 'tickets.pdf'},
-            {name: 'Sponsorship', file: this.root + 'sponsorship.pdf'},
+            {name: 'Ticket', file: this.root + 'tickets.doc'},
+            {name: 'Sponsorship', file: this.root + 'sponsorship.doc'},
             {name: 'Booster Letter', file: this.root + 'letter.docx'}
         ];
         this.scholarship = [
