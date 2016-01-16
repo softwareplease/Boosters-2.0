@@ -31,7 +31,11 @@ html, body {
 
 /*#endregion*/
 
-
+.btn-primary {
+    &:hover {
+        color:$brand-secondary;
+    }
+}
 
 .navbar {
     margin-bottom:0;
@@ -73,6 +77,10 @@ ul.no-bullets {
     @media(max-width: $screen-md-min) {
         left:39%;
     }
+}
+
+thead.text-center > tr > th {
+    text-align:center;
 }
 
 @media (max-width: $screen-xs-sm-min) {

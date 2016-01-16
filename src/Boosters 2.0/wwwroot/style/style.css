@@ -7922,6 +7922,9 @@ html, body {
   background-color: #F5F5F5; }
 
 /*#endregion*/
+.btn-primary:hover {
+  color: #f4cd64; }
+
 .navbar {
   margin-bottom: 0; }
 
@@ -7954,6 +7957,9 @@ ul.no-bullets {
   @media (max-width: 992px) {
     .logo {
       left: 39%; } }
+
+thead.text-center > tr > th {
+  text-align: center; }
 
 @media (max-width: 500px) {
   .hidden-xs-sm {
