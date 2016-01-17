@@ -8,6 +8,7 @@
     runSequence = require("run-sequence"),
     flatten = require('gulp-flatten'),
     del = require('del'),
+    clean = require('gulp-clean'),
     paths = require("../paths.js");
 
 gulp.task('clean-css', function () {
@@ -77,11 +78,11 @@ gulp.task('clean', function () {
 });
 
 gulp.task('build-app', function () {
-    run('clean', ['bundle-aurelia', 'build-css', 'copy-icons', 'copy-images', 'copy-files']);
+    runSequence('clean', ['bundle-aurelia', 'build-css', 'copy-icons', 'copy-images', 'copy-files']);
 });
 
 gulp.task('build', function () {
-    return runSequence(['unbundle-aurelia', 'build-css', 'copy-icons', 'copy-images', 'copy-files']);
+    return runSequence('clean', ['unbundle-aurelia', 'build-css', 'copy-icons', 'copy-images', 'copy-files']);
 });
 
 gulp.task('default', ['watch-sass']);

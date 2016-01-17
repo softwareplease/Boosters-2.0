@@ -1,4 +1,0 @@
-﻿http://ironsummitmedia.github.io/startbootstrap-modern-business/
-http://ironsummitmedia.github.io/startbootstrap-small-business/
-http://ironsummitmedia.github.io/startbootstrap-heroic-features/
-http://ironsummitmedia.github.io/startbootstrap-shop-homepage/
