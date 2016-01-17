@@ -4,11 +4,12 @@
 
 var config = {
     force: true,
-    packagePath: '',
+    baseUrl: '.',
+    configPath: './config.js',
     bundles: bundles.bundles
 };
 
-gulp.task('bundle-aurelia', function () {
+gulp.task('bundle-aurelia', ['unbundle-aurelia'], function () {
     return bundler.bundle(config);
 });
 

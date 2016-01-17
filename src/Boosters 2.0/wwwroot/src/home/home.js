@@ -1,10 +1,10 @@
 ﻿import {inject} from 'aurelia-framework';
-import {Validation} from 'aurelia-validation';
+//import {Validation} from 'aurelia-validation';
 import $ from 'bootstrap';
 
-@inject(Validation)
+//@inject(Validation)
 export class Home {
-    constructor (validation) {
+    constructor () {
         this.horseInputs = [
             {horseName: '', ownerName: ''}
         ];
