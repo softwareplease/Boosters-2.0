@@ -32,7 +32,7 @@ gulp.task('build-css', ['compile-sass'], function () {
                .pipe(minifyCss())
                .pipe(gulp.dest(paths.distCss));
 });
-
+//unused
 gulp.task('build-js', function () {
     return gulp.src(paths.js)
            .pipe(concat('site.js'))
@@ -77,11 +77,11 @@ gulp.task('clean', function () {
 });
 
 gulp.task('build-app', function () {
-    run('clean', ['bundle-aurelia', 'build-css', 'build-js', 'copy-icons', 'copy-images', 'copy-files']);
+    run('clean', ['bundle-aurelia', 'build-css', 'copy-icons', 'copy-images', 'copy-files']);
 });
 
 gulp.task('build', function () {
-    return runSequence(['unbundle-aurelia', 'build-css', 'build-js', 'copy-icons', 'copy-images', 'copy-files']);
+    return runSequence(['unbundle-aurelia', 'build-css', 'copy-icons', 'copy-images', 'copy-files']);
 });
 
 gulp.task('default', ['watch-sass']);

@@ -83,6 +83,10 @@ thead.text-center > tr > th {
     text-align:center;
 }
 
+.aurelia-validation-message {
+    display:none;
+}
+
 @media (max-width: $screen-xs-sm-min) {
     .hidden-xs-sm {
         display:none;
