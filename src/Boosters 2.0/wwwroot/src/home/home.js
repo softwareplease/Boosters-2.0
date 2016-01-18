@@ -24,7 +24,7 @@ export class Home {
         //TODO - validation for horses, Add social media icons, email list functionality, horses controls make 50% width
     }
     select(event) {
-        let amount = event.srcElement.value;
+        let amount = Number($("select[name='os0']").val());
         if(amount > this.horseInputs.length) {
             for (var i = this.horseInputs.length; i < amount; i++) {
                 this.horseInputs.push({horseName: '', ownerName: ''});
