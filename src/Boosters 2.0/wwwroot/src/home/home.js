@@ -1,18 +1,10 @@
-﻿import {inject} from 'aurelia-framework';
-//import {Validation} from 'aurelia-validation';
-import $ from 'bootstrap';
+﻿import $ from 'bootstrap';
 
-//@inject(Validation)
 export class Home {
     constructor () {
         this.horseInputs = [
-            {horseName: '', ownerName: ''}
+            {horseName: null, ownerName: null}
         ];
-        //this.validation = validation.on(this)
-        //    .ensure('horseInputs.horseName')
-        //        .isNotEmpty()
-        //    .ensure('horseInputs.ownerName')
-        //        .isNotEmpty();
         this.horseAndOwnerNames;
         this.horseOptions = [
             {value: 1, text: '1 $15.00'},
@@ -26,6 +18,7 @@ export class Home {
             {value: 9, text: '9 $135.00'},
             {value: 10, text: '10 $150.00'}
         ];
+
 
         //$('#carousel').carousel();
         //TODO - validation for horses, Add social media icons, email list functionality, horses controls make 50% width
@@ -42,20 +35,12 @@ export class Home {
     }
     submitHorses() {
         var value = '';
-        //this.validation.validate().then(() => {
-        //    for(var i = 0; i < this.horseInputs.length; i++) {
-        //        value += this.horseInputs[i].ownerName + '-' + this.horseInputs[i].ownerName;
-        //        if (i + 1 != this.horseInputs.length)
-        //            value += '/';
-        //    }
-        //    this.horseAndOwnerNames = value;
-        //}, () => { });
-            for(var i = 0; i < this.horseInputs.length; i++) {
-                value += this.horseInputs[i].ownerName + '-' + this.horseInputs[i].horseName;
-                if (i + 1 != this.horseInputs.length)
-                    value += '/';
-            }
-            this.horseAndOwnerNames = value;
-            return true;
+        for(var i = 0; i < this.horseInputs.length; i++) {
+            value += this.horseInputs[i].ownerName + '-' + this.horseInputs[i].horseName;
+            if (i + 1 != this.horseInputs.length)
+                value += '/';
+        }
+        this.horseAndOwnerNames = value;
+        return true;
     }
 }
