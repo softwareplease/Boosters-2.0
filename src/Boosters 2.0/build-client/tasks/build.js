@@ -72,9 +72,9 @@ gulp.task('copy-files', ['clean-files'], function () {
 });
 
 gulp.task('clean', function () {
-    gulp.src([paths.distJs, paths.distCss, paths.distImages, paths.distFiles])
-        .pipe(clean({ force: true }));
     del([paths.distAurelia + '/*.js']);
+    return gulp.src([paths.distJs, paths.distCss, paths.distImages, paths.distFiles])
+        .pipe(clean({ force: true }));
 });
 
 gulp.task('build-app', function () {
