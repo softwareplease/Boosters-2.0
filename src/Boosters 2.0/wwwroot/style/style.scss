@@ -57,6 +57,18 @@ html, body {
     color:$brand-primary !important;
 }
 
+.text-white {
+    color:#fff;
+}
+
+.background-primary {
+    background-color:$brand-primary;
+}
+
+.background-secondary {
+    background-color:$brand-secondary;
+}
+
 .no-border {
     border:none !important;
 }

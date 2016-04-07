@@ -7940,6 +7940,15 @@ html, body {
 .text-primary {
   color: #6F5584 !important; }
 
+.text-white {
+  color: #fff; }
+
+.background-primary {
+  background-color: #6F5584; }
+
+.background-secondary {
+  background-color: #f4cd64; }
+
 .no-border {
   border: none !important; }
 
