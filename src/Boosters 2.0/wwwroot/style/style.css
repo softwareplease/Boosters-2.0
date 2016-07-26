@@ -7982,6 +7982,27 @@ thead.text-center > tr > th {
     width: 50%;
     float: left; } }
 
+/*#region Home*/
+.info-boxes .list-group-item:nth-child(odd) {
+  background-color: #f5f5f5; }
+
+.dictionary {
+  margin-bottom: 20px; }
+  .dictionary h1 {
+    font-size: 7em; }
+  .dictionary h1, .dictionary h2, .dictionary h3, .dictionary h4 {
+    margin: 0; }
+  .dictionary .definition > h3 {
+    font-size: 20px; }
+  .dictionary .word, .dictionary .definition {
+    margin-top: 10px; }
+  .dictionary i {
+    margin-top: 50px; }
+  @media (max-width: 767px) {
+    .dictionary .word, .dictionary .definition, .dictionary .dot {
+      padding: 0; } }
+
+/*#endregion*/
 /*#region Member*/
 .member-details-wrapper {
   position: relative;

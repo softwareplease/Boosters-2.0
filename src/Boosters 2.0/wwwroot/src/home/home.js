@@ -2,7 +2,9 @@
 
 export class Home {
     constructor () {
-        //$('#carousel').carousel();
-        //TODO - validation for horses, Add social media icons, email list functionality, horses controls make 50% width
+        //$('#carousel').carousel({
+        //    interval: 5000
+        //});
+        //TODO - Add social media icons, email list functionality
     }
 }

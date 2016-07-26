@@ -18,6 +18,9 @@
             {name: 'Deposit', file: this.root + 'deposit.docx'},
             {name: 'Funds Request', file: this.root + 'request.docx'}
         ];
+        this.signage = [
+            {name: 'Signage Contract', file: this.root + 'signage-contract.docx'}
+        ]
     }
 
 }

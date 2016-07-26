@@ -1,5 +1,5 @@
 ﻿<template>
-    <!--<div id="carousel" class="carousel slide hidden-xs" data-ride="carousel">
+    <div id="carousel" class="carousel slide hidden-xs" data-ride="carousel" data-interval="5000">
         <ol class="carousel-indicators">
             <li data-target="#carousel" data-slide-to="0" class="active"></li>
             <li data-target="#carousel" data-slide-to="1"></li>
@@ -27,44 +27,97 @@
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>-->
-
+    </div>
     <div class="container">
         <div class="row">
+            <div class="col-lg-12 dictionary">
+                <div class="col-sm-2 col-md-3 hidden-xs text-right">
+                    <h1>
+                        {
+                    </h1>
+                </div>
+                <div class="col-xs-4 col-sm-3 col-md-2 word text-right">
+                    <h2>
+                        <strong>booster</strong>
+                    </h2>
+                    <h3>
+                        [<strong>boo</strong>-ster]
+                    </h3>
+                    <h3>noun</h3>
+                </div>
+                <div class="col-xs-1 dot text-center">
+                    <i class="fa fa-circle"></i>
+                </div>
+                <div class="col-xs-7 col-sm-4 col-md-3 definition text-left">
+                    <h3>a person or thing that boosts,  especially an energetic and  enthusiastic supporter.</h3>
+                </div>
+                <div class="col-sm-2 col-md-3 text-left hidden-xs">
+                    <h1>
+                        }
+                    </h1>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <br />
+            <br />
             <div class="col-lg-12 text-center">
                 <div class="content">
-                    <div class="jumbotron top-buffer text-white background-primary">
-                        <h1>
-                            Lakewood Community Night at the Crushers
-                        </h1>
-                        <h2>[a Lakewood Athletic Boosters Fundraiser]</h2>
-                    </div>
-                    <div class="well">
-                        <h3>Flyer is avaliable <a href="/dist/files/LHS_Boosters_CrushersFlyer_FINAL.pdf" target="_blank">here</a></h3>
+                    <p class="lead">
+                        No one is more energetic and enthusiastic for our student athletes than their parents!
+                        <br />
+                        The Lakewood Athletic Boosters is a team of parents who generously volunteer their time to help earn/raise money for our Lakewood Athletic Department.
+                    </p>
+                    <div class="well primary">
+                        CONCESSIONS &nbsp;&nbsp; <span class="secondary">&#9679;</span> &nbsp;&nbsp; FUNDRAISING &nbsp;&nbsp; <span class="secondary">&#9679;</span> &nbsp;&nbsp; BUSINESS PARTNERSHIPS
                     </div>
                 </div>
+            </div>
+            <div class="col-lg-12">
                 <div class="content">
-                    <h1 class="page-header text-primary">
-                        Saturday, June 11th @ 7:05pm
-                    </h1>
-                    <h3>
-                        Come enjoy a fun and relaxing evening at the
-                        Lake Erie Crushers game! For every ticket purchased in
-                        advance via the link below, money will be raised for
-                        Lakewood Athletic Boosters.
-                    </h3>
-                    <h3>
-                        Cost: $9 / tickets ( Home box tickets )
-                        Where: All Pro Freight Stadium
-                        2009 Baseball Blvd., Avon, OH
-                        Gates open at 6:05pm
-                    </h3>
-                    <a class="btn btn-primary btn-lg" href="https://crushers.isportstix.com/order/group/LHS-16/" target="_blank">Purchase Tickets</a>
-                    <h3>
-                        <strong>Questions?</strong> Contact Mike Mays(Crushers) at
-                        440.934.8238 or Karen Burks (Lakewood Athletic
-                        Boosters) at 330.675.9036
-                    </h3>
+                    <h1 class="page-header text-primary">Did You Know</h1>
+                    <div class="col-sm-6">
+                        <p class="lead">
+                            The Lakewood Athletic Boosters has been around since the early 80's, becoming a 501(c)(3) Tax Exempt Non-Profit Organization in 1991.
+                            <br />
+                            <br />
+                            In the 90’s  Lakewood was starting to have problems passing levies and the pay-to-participate was instituted. That is when the Boosters took on the challenge to bring the proposed $125 fee down to $75 for all athletes.
+                            booster
+                        </p>
+                    </div>
+                    <div class="col-sm-6 text-center info-boxes">
+                        <div class="list-group-item">
+                            <h4>
+                                COMMITED TO DONATING
+                                <br />
+                                <strong class="secondary">$60,000</strong> per year
+                                <br />
+                                TO ATHLETIC DEPARTMENT
+                            </h4>
+                        </div>
+                        <div class="list-group-item">
+                            <h4>
+                                AWARDS EIGHT
+                                <br />
+                                <strong class="secondary">$500</strong>
+                                <br />
+                                SCHOLARSHIPS EACH YEAR
+                            </h4>
+                        </div>
+                        <div class="list-group-item">
+                            <h4>
+                                OVER
+                                <br />
+                                <strong class="secondary">$1 MILLION</strong> DONATED
+                                <br />
+                                SINCE BOOSTERS INCEPTION
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 top-buffer">
+                <div class="well primary text-center">
+                    <strong>JOIN TODAY!</strong> <a route-href="route: member">HERE</a> &nbsp;&nbsp; | &nbsp;&nbsp; DOWNLOAD MEMBERSHIP FLYER <a href="/dist/files/membership-flyer.pdf" target="_blank">HERE</a>
                 </div>
             </div>
         </div>
