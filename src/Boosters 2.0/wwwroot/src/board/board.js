@@ -3,8 +3,10 @@
     constructor() {
         this.boardOfDirectors = [
             {name: 'Ann Schwarz', position: 'President', email: 'ann.schwarz2126@gmail.com'},
-            {name: 'Amy Kemp', position: 'Executive Vice President', email: 'teamkemp@cox.net'},
-            {name: 'Tina Carleton', position: '1st Vice President', email: 'tinankidz@sbcglobal.net'},
+            {name: 'Karen Burks', position: 'Executive Vice President', email: 'karen.burks@covelli.com'},
+            {name: 'Carmen Bowen', position: '1st Vice President', email: 'carmctown@aol.com'},
+            {name: 'Susan Zanghi', position: '2nd Vice President', email: 'smzanghi@gmail.com'},
+            {name: 'Nici Crislip', position: '3rd Vice President of Marketing', email: 'nicicrislip@yahoo.com'},
             {name: 'Charles Hokky', position: 'Treasurer', email: 'cshokky@att.net'},
             {name: 'Renee Mahoney', position: 'Treasurer Fundraisers', email: 'nicholasmahoney@sbcglobal.net'},
             {name: 'Debbie Riddle', position: 'Recording Secretary', email: 'driddledesign@cox.net'},
@@ -17,7 +19,6 @@
         ];
         this.delegates = [
             {name: 'Dawn Gerakis', position: 'Ranger Shop Manager', email: 'dawnmcampbell@yahoo.com'},
-            {name: 'Tom Clause', position: 'Manager of Stadium Signs', email: 'tomclause@sbcglobal.net'},
             {name: 'David Schmidt', position: 'Web Developer', email: 'schmidtdavid0707@yahoo.com'}
         ];
     }

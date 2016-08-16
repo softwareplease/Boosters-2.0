@@ -188,6 +188,13 @@ thead.text-center > tr > th {
 
 /*#endregion Flickr*/
 
+/*#region Signage*/
+#signage-example {
+    img {
+        border-bottom:solid 5px $brand-secondary;
+    }
+}
+/*#endregion*/
 /*#region FontAwesome*/
 
 .fa-large {

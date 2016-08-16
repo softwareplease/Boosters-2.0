@@ -8,6 +8,7 @@
            { route: 'Photos', name: 'photos', moduleId: './photos/photos', nav: true, title: 'Photos'},
            { route: 'Board', name: 'board', moduleId: './board/board', nav: true, title: 'Board'},
            { route: 'Meetings', name: 'meetings', moduleId: './meetings/meetings', nav: true, title: 'Meetings'},
+           { route: 'Signage', name: 'signage', moduleId: './signage/signage', nav: true, title: 'Signage'},
            { route: 'Forms', name: 'forms', moduleId: './forms/forms', nav: true, title: 'Forms'}
         ]);
         //{ route: 'News', name: 'news', moduleId: './news/news', nav: true, title: 'News' },

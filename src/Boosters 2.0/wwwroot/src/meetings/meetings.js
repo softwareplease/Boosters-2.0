@@ -14,7 +14,10 @@
         ];
         this.meetings2016 = [
             {name: 'January', file: this.root + 'meetingJan-16.docx'},
-            {name: 'February', file: this.root + 'meetingFeb-16.docx'}
+            {name: 'February', file: this.root + 'meetingFeb-16.docx'},
+            {name: 'March', file: this.root + 'meetingMar-16.docx'},
+            {name: 'April', file: this.root + 'meetingApr-16.docx'},
+            {name: 'May', file: this.root + 'meetingMay-16.docx'}
         ];
         this.minutes2016 = [
             {name: 'January', file: this.root + 'minutesJan-16.docx'},
