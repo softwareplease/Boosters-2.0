@@ -77,6 +77,12 @@ ul.no-bullets {
     list-style-type:none;
 }
 
+ul.bullet-primary {
+    li {
+        color:$brand-primary;
+    }
+}
+
 .page-header-large {
     font-size:8em;
 }
@@ -195,6 +201,7 @@ thead.text-center > tr > th {
     }
 }
 /*#endregion*/
+
 /*#region FontAwesome*/
 
 .fa-large {
