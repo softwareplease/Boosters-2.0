@@ -104,13 +104,19 @@
                     <p>
                         Purchase a horse in race 1 through 9 for <strong>$15</strong> and the winning horse receives <strong>$30</strong>
                     </p>
-                    <div class="col-lg-2 hidden-xs"></div>
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="form-group col-lg-8 col-lg-12">
-                        <input type="hidden" name="cmd" value="_s-xclick">
-                        <input type="hidden" name="hosted_button_id" value="ZBEXDTZXCQKX4">
-                        <input type="hidden" name="on0" value="Horse Amount">
-                        <input type="hidden" name="on1" value="Horse Names">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="lhsathleticboosters@gmail.com">
+                        <input type="hidden" name="lc" value="US">
+                        <input type="hidden" name="item_name" value="Horses">
+                        <input type="hidden" name="button_subtype" value="services">
+                        <input type="hidden" name="no_note" value="0">
                         <input type="hidden" name="currency_code" value="USD">
+                        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest">
+                        <input type="hidden" name="on0" value="Horse Amounts">
+                        <input type="hidden" name="on1" value="Horse Names">
+                        <input type="text" name="os1" maxlength="200" class="hidden" value.bind="horseAndOwnerNames">
+
                         <div class="input-group top-buffer">
                             <span class="input-group-addon" id="horse-amount-label">
                                 Select # of Horses
@@ -119,6 +125,30 @@
                                 <option repeat.for="option of horseOptions" value.bind="option.value">${option.text}</option>
                             </select>
                         </div>
+
+                        <input type="hidden" name="currency_code" value="USD">
+                        <input type="hidden" name="option_select0" value="1">
+                        <input type="hidden" name="option_amount0" value="15.00">
+                        <input type="hidden" name="option_select1" value="2">
+                        <input type="hidden" name="option_amount1" value="30.00">
+                        <input type="hidden" name="option_select2" value="3">
+                        <input type="hidden" name="option_amount2" value="45.00">
+                        <input type="hidden" name="option_select3" value="4">
+                        <input type="hidden" name="option_amount3" value="60.00">
+                        <input type="hidden" name="option_select4" value="5">
+                        <input type="hidden" name="option_amount4" value="75.00">
+                        <input type="hidden" name="option_select5" value="6">
+                        <input type="hidden" name="option_amount5" value="90.00">
+                        <input type="hidden" name="option_select6" value="7">
+                        <input type="hidden" name="option_amount6" value="105.00">
+                        <input type="hidden" name="option_select7" value="8">
+                        <input type="hidden" name="option_amount7" value="120.00">
+                        <input type="hidden" name="option_select8" value="9">
+                        <input type="hidden" name="option_amount8" value="135.00">
+                        <input type="hidden" name="option_select9" value="10">
+                        <input type="hidden" name="option_amount9" value="150.00">
+                        <input type="hidden" name="option_index" value="0">
+
                         <p class="top-buffer"><strong>All fields are required if purchasing horse(s)</strong></p>
                         <div class="horse-owner-input-wrapper" repeat.for="input of horseInputs">
                             <div class="form-group col-lg-6">
@@ -134,15 +164,46 @@
                                 <input type="text" class="form-control" value.bind="input.horseName" id="horse-input-${$index}" />
                             </div>
                         </div>
-                        <div class="hidden">
-                            <textarea name="os1" class="form-control" value.bind="horseAndOwnerNames"></textarea>
-                        </div>
                         <button name="submit" class="btn btn-primary" click.trigger="submitHorses()">Buy Now</button>
                     </form>
                     <div class="col-lg-2 hidden-xs"></div>
                 </div>
                 <div class="content">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
+                        <p class="lead text-primary">
+                            Sponsorship
+                        </p>
+                        <hr />
+                        <p>You can download the the Night at the Races Sponsorship Form <a href="../../dist/files/sponsorship.doc" target="_blank">Here</a></p>
+                        <p>
+                            Name, business card or business logo inserted at the top of the race page in the
+                            program. Name or business announced at the beginning and end of that race.
+                            <strong>Business cards and logos can be accepted digitally at my e-mail <a href="mailto:teamkemp@cox.net">teamkemp@cox.net</a></strong>.
+                        </p>
+                        <table class="table table-striped">
+                            <thead class="text-center">
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Price</th>
+                                    <th>-</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Race Sponsor</td>
+                                    <td>$150.00</td>
+                                    <td>
+                                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                                            <input type="hidden" name="cmd" value="_s-xclick">
+                                            <input type="hidden" name="hosted_button_id" value="DUJ2JYQF9475W">
+                                            <button name="submit" class="btn btn-primary">Buy Now</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
                         <p class="lead text-primary">
                             Advertisements
                         </p>
@@ -175,64 +236,4 @@
             </div>
         </div>
     </div>
-
-
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_xclick">
-        <input type="hidden" name="business" value="lhsathleticboosters@gmail.com">
-        <input type="hidden" name="lc" value="US">
-        <input type="hidden" name="item_name" value="Horses">
-        <input type="hidden" name="button_subtype" value="services">
-        <input type="hidden" name="no_note" value="0">
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest">
-        <table>
-            <tr><td><input type="hidden" name="on0" value="Horse Amounts">Horse Amounts</td></tr>
-            <tr>
-                <td>
-                    <select name="os0">
-                        <option value="1">1 $15.00 USD</option>
-                        <option value="2">2 $30.00 USD</option>
-                        <option value="3">3 $45.00 USD</option>
-                        <option value="4">4 $60.00 USD</option>
-                        <option value="5">5 $75.00 USD</option>
-                        <option value="6">6 $90.00 USD</option>
-                        <option value="7">7 $105.00 USD</option>
-                        <option value="8">8 $120.00 USD</option>
-                        <option value="9">9 $135.00 USD</option>
-                        <option value="10">10 $150.00 USD</option>
-                    </select>
-                </td>
-            </tr>
-            <tr><td><input type="hidden" name="on1" value="Horse Names">Horse Names</td></tr>
-            <tr><td><input type="text" name="os1" maxlength="200"></td></tr>
-        </table>
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="hidden" name="option_select0" value="1">
-        <input type="hidden" name="option_amount0" value="15.00">
-        <input type="hidden" name="option_select1" value="2">
-        <input type="hidden" name="option_amount1" value="30.00">
-        <input type="hidden" name="option_select2" value="3">
-        <input type="hidden" name="option_amount2" value="45.00">
-        <input type="hidden" name="option_select3" value="4">
-        <input type="hidden" name="option_amount3" value="60.00">
-        <input type="hidden" name="option_select4" value="5">
-        <input type="hidden" name="option_amount4" value="75.00">
-        <input type="hidden" name="option_select5" value="6">
-        <input type="hidden" name="option_amount5" value="90.00">
-        <input type="hidden" name="option_select6" value="7">
-        <input type="hidden" name="option_amount6" value="105.00">
-        <input type="hidden" name="option_select7" value="8">
-        <input type="hidden" name="option_amount7" value="120.00">
-        <input type="hidden" name="option_select8" value="9">
-        <input type="hidden" name="option_amount8" value="135.00">
-        <input type="hidden" name="option_select9" value="10">
-        <input type="hidden" name="option_amount9" value="150.00">
-        <input type="hidden" name="option_index" value="0">
-        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-    </form>
-
-
-
 </template>

@@ -38,13 +38,27 @@ export class Home {
         }
     }
     submitHorses() {
-        var value = '';
-        for(var i = 0; i < this.horseInputs.length; i++) {
-            value += this.horseInputs[i].ownerName + '-' + this.horseInputs[i].horseName;
-            if (i + 1 != this.horseInputs.length)
-                value += '/';
+        if(this.isValid()) {
+            var value = '';
+            for(var i = 0; i < this.horseInputs.length; i++) {
+                value += this.horseInputs[i].ownerName + '-' + this.horseInputs[i].horseName;
+                if (i + 1 != this.horseInputs.length)
+                    value += '/';
+            }
+            this.horseAndOwnerNames = value;
+            return true;
+        } else {
+            return false;
         }
-        this.horseAndOwnerNames = value;
+    }
+
+    isValid() {
+        for(var i = 0; i < this.horseInputs.length; i++) {
+            if(this.horseInputs[i].horseName == undefined || this.horseInputs[i].horseName == '' || this.horseInputs[i].horseName == null)
+                return false;
+            if(this.horseInputs[i].ownerName == undefined || this.horseInputs[i].ownerName == '' || this.horseInputs[i].ownerName == null)
+                return false;
+        }
         return true;
     }
 }
