@@ -77,6 +77,12 @@ ul.no-bullets {
     list-style-type:none;
 }
 
+ul.bullet-primary {
+    li {
+        color:$brand-primary;
+    }
+}
+
 .page-header-large {
     font-size:8em;
 }
@@ -111,6 +117,40 @@ thead.text-center > tr > th {
         float:left;
     }
 }
+
+/*#region Home*/
+
+.info-boxes {
+    .list-group-item:nth-child(odd) {
+        background-color:$table-bg-active;
+    }
+}
+
+.dictionary {
+    margin-bottom:20px;
+    h1 {
+        font-size:7em;
+    }
+    h1, h2, h3, h4 {
+        margin:0;
+    }
+    .definition > h3 {
+        font-size:20px;
+    }
+    .word, .definition {
+        margin-top:10px;
+    }
+    i {
+        margin-top:50px;
+    } 
+    @media (max-width: $screen-xs-max) {
+        .word, .definition, .dot {
+            padding:0;
+        }
+    }
+}
+
+/*#endregion*/
 
 /*#region Member*/
 
@@ -153,6 +193,14 @@ thead.text-center > tr > th {
 }
 
 /*#endregion Flickr*/
+
+/*#region Signage*/
+#signage-example {
+    img {
+        border-bottom:solid 5px $brand-secondary;
+    }
+}
+/*#endregion*/
 
 /*#region FontAwesome*/
 
