@@ -2,7 +2,6 @@
     "bundles": {
         "dist/app-build": {
             "includes": [
-                "[*]",
                 "src/**/*.js",
                 "src/**/*.html!text"
             ],
