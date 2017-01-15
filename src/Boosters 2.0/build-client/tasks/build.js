@@ -77,11 +77,11 @@ gulp.task('clean', function () {
         .pipe(clean({ force: true }));
 });
 
-gulp.task('build-app', function () {
+gulp.task('build-prod', function () {
     runSequence('clean', ['bundle-aurelia', 'build-css', 'copy-icons', 'copy-images', 'copy-files']);
 });
 
-gulp.task('build', function () {
+gulp.task('build-dev', function () {
     return runSequence('clean', ['unbundle-aurelia', 'build-css', 'copy-icons', 'copy-images', 'copy-files']);
 });
 
