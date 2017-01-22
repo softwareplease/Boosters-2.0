@@ -1,3 +1,47 @@
 ﻿<template>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="content">
+                    <div class="jumbotron top-buffer text-center">
+                        <h1 class="text-primary">
+                            WIN THIS CAR!
+                        </h1>
+                        <p>2017 Steve Barry Buick Encore 2017 Steve Barry Buick Encore 2-Year Lease*</p>
+                        <h2 class="text-primary">or $10,000 CASH $10,000 CASH option </h2>
+                        <image id="banner-car" src="../../dist/images/car-banner.png" alt="2017 Buick Encore" class="img-responsive"/>
+                    </div>
+                </div>
+                <h1 class="page-header text-primary">
+                    Select a Team
+                </h1>
+                <div class="content">
+                    <div class="col-lg-6">
+                        <select class="form-control" change.trigger="select($event)">
+                            <option repeat.for="option of teams" value.bind="option">${option}</option>
+                        </select>               
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="CPZDPX6TMTNUE">
+                            <input type="hidden" name="on0" value="Team">
+                            <input type="text" name="os0" maxlength="200" class="hidden" value.bind="selectedTeam">
+                            <br />
+                            <button name="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        <br />
+                    </div>
+                    <div class="col-lg-6">
+                        This should be some description of how the raffle will work
+                    </div>
+                </div>
+                <div class="content">
+                    <div id="flyer-well" class="col-lg-12">
+                        <div class="well text-center">
+                            Download the flyer <a href="/dist/files/car-raffle-flyer.pdf" target="_blank">HERE</a> &nbsp;&nbsp; | &nbsp;&nbsp; Download the rules and regulations <a href="/dist/files/car-raffle-rules-regulations.pdf" target="_blank">HERE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>

@@ -13,7 +13,7 @@
             <div id="nav-bar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
-                        <a href.bind="row.href" click.trigger="collapse()">${row.title}</a>
+                        <a href.bind="row.href" click.trigger="collapse()" class="${row.settings.important ? 'emphasis' : ''}">${row.title}</a>
                     </li>
                     <li>
                         <a href="https://www.rankonesport.com/Schedules/View_Schedule_All.aspx?P=&D=cab65917-76cf-49eb-bb60-c973b7d2d8dd" target="_blank">Calender</a>

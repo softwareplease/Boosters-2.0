@@ -7943,6 +7943,45 @@ html, body {
 .text-white {
   color: #fff; }
 
+@-webkit-keyframes whiteYellow {
+  0% {
+    color: #fff; }
+  50% {
+    color: #f4cd64; }
+  100% {
+    color: #fff; } }
+
+@-moz-keyframes whiteYellow {
+  0% {
+    color: #fff; }
+  50% {
+    color: #f4cd64; }
+  100% {
+    color: #fff; } }
+
+@-o-keyframes whiteYellow {
+  0% {
+    color: #fff; }
+  50% {
+    color: #f4cd64; }
+  100% {
+    color: #fff; } }
+
+@keyframes whiteYellow {
+  0% {
+    color: #fff; }
+  50% {
+    color: #f4cd64; }
+  100% {
+    color: #fff; } }
+
+.emphasis {
+  -webkit-animation: whiteYellow 3s infinite;
+  -moz-animation: whiteYellow 3s infinite;
+  -o-animation: whiteYellow 3s infinite;
+  animation: whiteYellow 3s infinite;
+  font-weight: bold; }
+
 .background-primary {
   background-color: #6F5584; }
 
@@ -8004,6 +8043,19 @@ thead.text-center > tr > th {
   @media (max-width: 767px) {
     .dictionary .word, .dictionary .definition, .dictionary .dot {
       padding: 0; } }
+
+/*#endregion*/
+/*#region Raffle*/
+#banner-car {
+  border: solid 1px #f4cd64;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  margin: 0 auto; }
+
+#flyer-well {
+  margin-top: 10px;
+  padding-top: 10px; }
 
 /*#endregion*/
 /*#region Member*/
