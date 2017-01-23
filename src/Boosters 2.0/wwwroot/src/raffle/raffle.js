@@ -1,6 +1,7 @@
 ﻿export class Raffle {
     constructor() {
         this.teams = [
+            'No Team',
             'Football',
             'Cheerleading',
             'Volleyball',
