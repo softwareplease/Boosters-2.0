@@ -179,6 +179,14 @@ thead.text-center > tr > th {
     }
 }
 
+.raffle {
+    margin-top:10px;
+    -webkit-animation: whiteYellow 3s infinite; 
+    -moz-animation:    whiteYellow 3s infinite; 
+    -o-animation:      whiteYellow 3s infinite; 
+    animation:         whiteYellow 3s infinite; 
+}
+
 /*#endregion*/
 
 /*#region Raffle*/
