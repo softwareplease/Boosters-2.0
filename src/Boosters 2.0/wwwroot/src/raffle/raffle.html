@@ -17,14 +17,24 @@
                 </h1>
                 <div class="content">
                     <div class="col-lg-6">
-                        <select class="form-control" change.trigger="select($event)">
+                        <select class="form-control" change.trigger="selectTeam($event)">
                             <option repeat.for="option of teams" value.bind="option">${option}</option>
                         </select>
+                        <br />
+                        <select class="form-control" change.trigger="selectTickets($event)">
+                            <option value="1">1 $25.00 USD</option>
+                            <option value="2">2 $50.00 USD</option>
+                            <option value="3">3 $75.00 USD</option>
+                            <option value="4">4 $100.00 USD</option>
+                        </select>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="currency_code" value="USD">
                             <input type="hidden" name="cmd" value="_s-xclick">
                             <input type="hidden" name="hosted_button_id" value="CPZDPX6TMTNUE">
-                            <input type="hidden" name="on0" value="Team">
-                            <input type="text" name="os0" maxlength="200" class="hidden" value.bind="selectedTeam">
+                            <input type="hidden" name="on0" value="Ticket Count">
+                            <input type="hidden" name="on1" value="Team">
+                            <input type="text" name="os0" maxlength="200" class="hidden" value.bind="selectedTickets">
+                            <input type="text" name="os1" maxlength="200" class="hidden" value.bind="selectedTeam">
                             <br />
                             <button name="submit" class="btn btn-primary">Submit</button>
                         </form>
@@ -48,3 +58,25 @@
         </div>
     </div>
 </template>
+
+
+
+
+
+<!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <table>
+        <tr><td><input type="hidden" name="on0" value="Ticket Count">Ticket Count</td></tr>
+        <tr>
+            <td>
+                <select name="os0">
+                    <option value="1">1 $25.00 USD</option>
+                    <option value="2">2 $50.00 USD</option>
+                    <option value="3">3 $75.00 USD</option>
+                    <option value="4">4 $100.00 USD</option>
+                </select>
+            </td>
+        </tr>
+        <tr><td><input type="hidden" name="on1" value="Team">Team</td></tr>
+        <tr><td><input type="text" name="os1" maxlength="200"></td></tr>
+    </table>
+</form>-->
