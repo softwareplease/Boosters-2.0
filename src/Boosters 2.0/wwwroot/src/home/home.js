@@ -9,56 +9,47 @@
 //    }
 //}
 export class Home {
-    constructor () {
-        this.horseInputs = [
-            {horseName: null, ownerName: null}
+    constructor() {
+        this.teams = [
+            'No Team',
+            'Football',
+            'Cheerleading',
+            'Volleyball',
+            'Golf',
+            'Boys Cross Country',
+            'Girls Cross Country',
+            'Boys Soccer',
+            'Girls Soccer',
+            'Girls Tennis',
+            'Boys Basketball',
+            'Girls Basketball',
+            'Gymnastics',
+            'Wrestling',
+            'Ice Hockey',
+            'Swimming and Diving',
+            'Boys and Girls Indoor Track',
+            'Boys Baseball',
+            'Girls Softball',
+            'Boys Tennis',
+            'Boys Track and Field',
+            'Girls Track and Field',
+            'Boys and Girls Rugby'
         ];
-        this.horseAndOwnerNames;
-        this.horseOptions = [
-            {value: 1, text: '1 $15.00'},
-            {value: 2, text: '2 $30.00'},
-            {value: 3, text: '3 $45.00'},
-            {value: 4, text: '4 $60.00'},
-            {value: 5, text: '5 $75.00'},
-            {value: 6, text: '6 $90.00'},
-            {value: 7, text: '7 $105.00'},
-            {value: 8, text: '8 $120.00'},
-            {value: 9, text: '9 $135.00'},
-            {value: 10, text: '10 $150.00'}
+        this.tickets = [
+            {value: 1, text: '1 $25.00 USD'},
+            {value: 2, text: '2 $50.00 USD'},
+            {value: 3, text: '3 $75.00 USD'},
+            {value: 4, text: '4 $100.00 USD'}
         ];
-    }
-    select(event) {
-        let amount = Number($("select[name='os0']").val());
-        if(amount > this.horseInputs.length) {
-            for (var i = this.horseInputs.length; i < amount; i++) {
-                this.horseInputs.push({horseName: '', ownerName: ''});
-            }
-        } else if (amount < this.horseInputs.length) {
-            this.horseInputs.splice(amount, this.horseInputs.length);
-        }
-    }
-    submitHorses() {
-        if(this.isValid()) {
-            var value = '';
-            for(var i = 0; i < this.horseInputs.length; i++) {
-                value += this.horseInputs[i].ownerName + '-' + this.horseInputs[i].horseName;
-                if (i + 1 != this.horseInputs.length)
-                    value += '/';
-            }
-            this.horseAndOwnerNames = value;
-            return true;
-        } else {
-            return false;
-        }
+        this.selectedTeam = this.teams[0];
+        this.selectedTickets = this.tickets[0].value;
     }
 
-    isValid() {
-        for(var i = 0; i < this.horseInputs.length; i++) {
-            if(this.horseInputs[i].horseName == undefined || this.horseInputs[i].horseName == '' || this.horseInputs[i].horseName == null)
-                return false;
-            if(this.horseInputs[i].ownerName == undefined || this.horseInputs[i].ownerName == '' || this.horseInputs[i].ownerName == null)
-                return false;
-        }
-        return true;
+    selectTeam(e) {
+        this.selectedTeam = e.target.value;
+    }
+
+    selectTickets(e) {
+        this.selectedTickets = e.target.value;
     }
 }

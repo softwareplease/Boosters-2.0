@@ -3,7 +3,6 @@
         this.router = router;
         config.map([
            { route: ['', 'Home'], name: 'home', moduleId: './home/home', nav: true, title: 'Home'},
-           { route: 'Raffle', name: 'raffle', moduleId: './raffle/raffle', nav: true, title: 'Car Raffle', settings: {important: true}},
            { route: 'Member', name: 'member', moduleId: './member/member', nav: true, title: 'Member'},
            { route: 'Volunteer', name: 'volunteer', moduleId: './volunteer/volunteer', nav: true, title: 'Volunteer'},
            { route: 'Photos', name: 'photos', moduleId: './photos/photos', nav: true, title: 'Photos'},
