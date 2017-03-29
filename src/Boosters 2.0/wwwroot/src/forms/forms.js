@@ -12,7 +12,7 @@
             {name: 'Booster Letter', file: this.root + 'letter.pdf'}
         ];
         this.scholarship = [
-            {name: 'Scholarship', file: this.root + 'scholarship2016.docx'}
+            {name: 'Scholarship', file: this.root + 'scholarship2017.docx'}
         ];
         this.team = [
             {name: 'Deposit', file: this.root + 'deposit.docx'},
