@@ -36,7 +36,7 @@
                             <input type="text" name="os0" maxlength="200" class="hidden" value.bind="selectedTickets">
                             <input type="text" name="os1" maxlength="200" class="hidden" value.bind="selectedTeam">
                             <br />
-                            <button name="submit" class="btn btn-primary">Submit</button>
+                            <button name="submit" class="btn btn-primary" disabled.bind="pastExpiration">Submit</button>
                         </form>
                         <br />
                     </div>

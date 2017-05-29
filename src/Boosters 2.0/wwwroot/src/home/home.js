@@ -43,6 +43,9 @@ export class Home {
         ];
         this.selectedTeam = this.teams[0];
         this.selectedTickets = this.tickets[0].value;
+        
+        let expirationDate = new Date(2017, 4, 30, 0, 0);
+        this.pastExpiration = new Date() >= expirationDate;
     }
 
     selectTeam(e) {
