@@ -1,5 +1,4 @@
-﻿var project = require("../project.json"),
-    root = project.webroot,
+﻿var root = 'wwwroot',
     distFolder = '/dist',
     styleFolder = '/style',
     libFolder = '/lib',

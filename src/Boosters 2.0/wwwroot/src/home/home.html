@@ -1,60 +1,123 @@
 ﻿<template>
+    <div id="carousel" class="carousel slide hidden-xs" data-ride="carousel" data-interval="5000">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img class="img-responsive center-block" src="../../dist/images/slide1.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="img-responsive center-block" src="../../dist/images/slide2.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="img-responsive center-block" src="../../dist/images/slide3.jpg" alt="">
+            </div>
+            <div class="logo">
+                <img src="/dist/images/logo.png" alt="LHS Athletic Boosters Logo" />
+            </div>
+        </div>
+        <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
     <div class="container">
         <div class="row">
+            <div class="col-lg-12 dictionary">
+                <div class="col-sm-2 col-md-3 hidden-xs text-right">
+                    <h1>
+                        {
+                    </h1>
+                </div>
+                <div class="col-xs-4 col-sm-3 col-md-2 word text-right">
+                    <h2>
+                        <strong>booster</strong>
+                    </h2>
+                    <h3>
+                        [<strong>boo</strong>-ster]
+                    </h3>
+                    <h3>noun</h3>
+                </div>
+                <div class="col-xs-1 dot text-center">
+                    <i class="fa fa-circle"></i>
+                </div>
+                <div class="col-xs-7 col-sm-4 col-md-3 definition text-left">
+                    <h3>a person or thing that boosts,  especially an energetic and  enthusiastic supporter.</h3>
+                </div>
+                <div class="col-sm-2 col-md-3 text-left hidden-xs">
+                    <h1>
+                        }
+                    </h1>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <br />
+            <br />
+            <div class="col-lg-12 text-center">
+                <div class="content">
+                    <p class="lead">
+                        No one is more energetic and enthusiastic for our student athletes than their parents!
+                        <br />
+                        The Lakewood Athletic Boosters is a team of parents who generously volunteer their time to help earn/raise money for our Lakewood Athletic Department.
+                    </p>
+                    <div class="well primary">
+                        CONCESSIONS &nbsp;&nbsp; <span class="secondary">&#9679;</span> &nbsp;&nbsp; FUNDRAISING &nbsp;&nbsp; <span class="secondary">&#9679;</span> &nbsp;&nbsp; BUSINESS PARTNERSHIPS
+                    </div>
+                </div>
+            </div>
             <div class="col-lg-12">
                 <div class="content">
-                    <div class="jumbotron top-buffer text-center">
-                        <h1 class="text-primary">
-                            WIN THIS CAR!
-                        </h1>
-                        <p>2017 Steve Barry Buick Encore 2-Year Lease*</p>
-                        <h2 class="text-primary">OR $10,000 CASH Option </h2>
-                        <image id="banner-car" src="../../dist/images/car-banner.png" alt="2017 Buick Encore" class="img-responsive" />
-                    </div>
-                </div>
-                <h1 class="page-header text-primary">
-                    Select a Team
-                </h1>
-                <div class="content">
-                    <div class="col-lg-6">
-                        <select class="form-control" change.trigger="selectTeam($event)">
-                            <option repeat.for="option of teams" value.bind="option">${option}</option>
-                        </select>
-                        <br />
-                        <select class="form-control" change.trigger="selectTickets($event)">
-                            <option value="1">1 $25.00 USD</option>
-                            <option value="2">2 $50.00 USD</option>
-                            <option value="3">3 $75.00 USD</option>
-                            <option value="4">4 $100.00 USD</option>
-                        </select>
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                            <input type="hidden" name="currency_code" value="USD">
-                            <input type="hidden" name="cmd" value="_s-xclick">
-                            <input type="hidden" name="hosted_button_id" value="CPZDPX6TMTNUE">
-                            <input type="hidden" name="on0" value="Ticket Count">
-                            <input type="hidden" name="on1" value="Team">
-                            <input type="text" name="os0" maxlength="200" class="hidden" value.bind="selectedTickets">
-                            <input type="text" name="os1" maxlength="200" class="hidden" value.bind="selectedTeam">
-                            <br />
-                            <button name="submit" class="btn btn-primary" disabled.bind="pastExpiration">Submit</button>
-                        </form>
-                        <br />
-                    </div>
-                    <div class="col-lg-6">
+                    <h1 class="page-header text-primary">Did You Know</h1>
+                    <div class="col-sm-6">
                         <p class="lead">
-                            If you want a Student Athlete’s team to receive credit for the sale of the Raffle Ticket,
-                            please use the Drop down box and select the appropriate team to purchase your Raffle Ticket through Pay Pal.
-                            Your team selection will be recorded and credit for the sale will be given to that team.
-                            You may also use the No Team option for your Raffle Ticket purchase.
+                            The Lakewood Athletic Boosters has been around since the early 80's, becoming a 501(c)(3) Tax Exempt Non-Profit Organization in 1991.
+                            <br />
+                            <br />
+                            In the 90’s  Lakewood was starting to have problems passing levies and the pay-to-participate was instituted. That is when the Boosters took on the challenge to bring the proposed $125 fee down to $75 for all athletes.
+                            booster
                         </p>
                     </div>
-                </div>
-                <div class="content">
-                    <div id="flyer-well" class="col-lg-12">
-                        <div class="well text-center">
-                            Download the flyer <a href="/dist/files/car-raffle-flyer.pdf" target="_blank">HERE</a> &nbsp;&nbsp; | &nbsp;&nbsp; Download the rules and regulations <a href="/dist/files/car-raffle-rules-regulations.docx" target="_blank">HERE</a>
+                    <div class="col-sm-6 text-center info-boxes">
+                        <div class="list-group-item">
+                            <h4>
+                                COMMITED TO DONATING
+                                <br />
+                                <strong class="secondary">$60,000</strong> per year
+                                <br />
+                                TO ATHLETIC DEPARTMENT
+                            </h4>
+                        </div>
+                        <div class="list-group-item">
+                            <h4>
+                                AWARDS EIGHT
+                                <br />
+                                <strong class="secondary">$500</strong>
+                                <br />
+                                SCHOLARSHIPS EACH YEAR
+                            </h4>
+                        </div>
+                        <div class="list-group-item">
+                            <h4>
+                                OVER
+                                <br />
+                                <strong class="secondary">$1 MILLION</strong> DONATED
+                                <br />
+                                SINCE BOOSTERS INCEPTION
+                            </h4>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="col-xs-12 top-buffer">
+                <div class="well primary text-center">
+                    <strong>BECOME A MEMBER BY JOINING TODAY!</strong> <a route-href="route: member">HERE</a>
                 </div>
             </div>
         </div>
